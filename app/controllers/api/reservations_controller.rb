@@ -4,6 +4,7 @@ class Api::ReservationsController < ApplicationController
   end
 
   def show
-    render json: Reservation.find(params[:id])
+    reservation = Reservation.includes(:user, :car, :city).find(params[:id])
+    render :json => reservation.to_json(:include => [:user, :car, :city])
   end
 end
