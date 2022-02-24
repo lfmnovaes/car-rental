@@ -1,9 +1,11 @@
 class Api::CitiesController < ApplicationController
   def index
-    render json: City.all
+    @cities = City.all
+    render json: @cities
   end
 
   def show
-    render json: City.find(params[:id])
+    @city = City.find(params[:id])
+    render json: @city
   end
 end
