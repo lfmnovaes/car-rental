@@ -3,6 +3,6 @@ Rails.application.routes.draw do
     resources :cars, only: [:index, :show]
     resources :users, only: [:index, :show]
     resources :cities, only: [:index, :show]
-    resources :reservations, only: [:index, :show]
+    resources :reservations, only: [:index, :show, :create, :destroy]
   end
 end
