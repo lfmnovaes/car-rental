@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_17_161334) do
     t.string "model"
     t.string "year"
     t.string "image"
-    t.boolean "reserved"
+    t.boolean "reserved", default: false
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_17_161334) do
     t.string "name"
     t.string "email"
     t.string "password"
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

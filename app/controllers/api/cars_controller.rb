@@ -1,11 +1,17 @@
 class Api::CarsController < ApplicationController
+  before_action(only: %i[index show]) { @reservations = Reservation.all }
+
   def index
     @cars = Car.all
+    @cars.each do |c|
+      c.reserved = reserved?(c.id)
+    end
     render json: @cars
   end
 
   def show
     @car = Car.find(params[:id])
+    @car.reserved = reserved?(@car.id)
     render json: @car
   end
 
@@ -29,6 +35,13 @@ class Api::CarsController < ApplicationController
   end
 
   private
+
+  def reserved?(id)
+    @reservations.each do |i|
+      return true if (i.car_id == id) && (i.date_start..i.date_end).cover?(Time.now)
+    end
+    false
+  end
 
   def car_params
     params.require(:car).permit(:brand, :model, :year, :image, :reserved, :price)
