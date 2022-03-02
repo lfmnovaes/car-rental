@@ -5,7 +5,7 @@ class CreateCars < ActiveRecord::Migration[7.0]
       t.string :model
       t.string :year
       t.string :image
-      t.boolean :reserved
+      t.boolean :reserved, :default => false
       t.integer :price
 
       t.timestamps
