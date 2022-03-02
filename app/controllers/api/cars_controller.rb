@@ -1,5 +1,5 @@
 class Api::CarsController < ApplicationController
-  before_action(only: [:index, :show]) { @reservations = Reservation.all }
+  before_action(only: %i[index show]) { @reservations = Reservation.all }
 
   def index
     @cars = Car.all
@@ -38,9 +38,7 @@ class Api::CarsController < ApplicationController
 
   def reserved?(id)
     @reservations.each do |i|
-      if (i.car_id == id) && (i.date_start..i.date_end).cover?(Time.now) then
-        return true
-      end
+      return true if (i.car_id == id) && (i.date_start..i.date_end).cover?(Time.now)
     end
     false
   end

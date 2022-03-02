@@ -11,8 +11,6 @@ class Reservation < ApplicationRecord
   def start_date_after_end_date
     return if date_end.blank? || date_start.blank?
 
-    if date_end < date_start
-      errors.add(:date_end, "The ending date must be after the starting date")
-    end
+    errors.add(:date_end, 'The ending date must be after the starting date') if date_end < date_start
   end
 end
