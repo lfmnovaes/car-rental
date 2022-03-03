@@ -48,6 +48,14 @@ Postgresql >= 12.9
 - [GitHub](https://github.com/elassis)
 - [LinkedIn](https://linkedin.com/in/enmanuel-lassis-peña)
 
+## Kanban board
+
+- Link to the kanban board: [Kanban-Board](https://github.com/lfmnovaes/car-rental-back-end/projects/1)
+
+- Link to the kanban board image: [Kanban-Image](https://user-images.githubusercontent.com/61469201/154359272-8ebc368b-dcb9-403c-93df-e5a7b50b8ba7.png)
+
+- Number of Team Members: 3
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
