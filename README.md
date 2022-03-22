@@ -17,7 +17,24 @@ Rails >= 7.0.0
 
 Postgresql >= 12.9
 
-## Getting Started
+## API Routes
+
+| Route | Verb | Description |
+|---------|-------------|-------------|
+| `/api/cars` | GET | Index of all Cars |
+| `/api/cars` | POST | Create a new Car |
+| `/api/cars/:id` | GET | View Car details by id |
+| `/api/cars/:id` | DELETE | Delete Car by id |
+| `/api/cities` | GET | Index of all available cities |
+| `/api/cities/:id` | GET | View a city by id |
+| `/api/reservations` | GET | Index of all users reservations |
+| `/api/reservations` | POST | Create a reservation |
+| `/api/reservations/:id` | GET | Show detailed infomation of a reservation |
+| `/api/reservations/:id` | DELETE | Delete a reservation |
+| `/api/users` | GET | Index of Users |
+| `/api/users/:id` | GET | Show specific User by id |
+
+## How to run the server locally
 
 - To get a local copy of the repository please run the following commands on your terminal:
    ```
@@ -29,11 +46,8 @@ Postgresql >= 12.9
 - Run `rails db:create` and `rails db:migrate` to create the database locally
   - If you already have one with the same name just run `rails db:reset` instead
 - After installing everything, you can run now the website with `rails s`
-
-## Running linters locally
-   
-- Rubocop (Ruby code linter), run: `rubocop`
-
+- To run the Ruby linter (Rubocop) locally, just run: `rubocop`
+  
 ## Authors
 
 👤 **Luís Fernando**
