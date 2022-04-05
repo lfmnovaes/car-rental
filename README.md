@@ -2,12 +2,12 @@
 
 # Rent Car
 
-> BackEnd API application to rent cars, synchonized with the [FrontEnd](https://github.com/ramiaquista/car-rental-front-end) React application.
+> BackEnd API application to rent cars, used in conjunction with the [FrontEnd](https://github.com/lfmnovaes/car-rental-front-end) React application.
 
 ## Live Servers
 
-- BackEnd API Server on [Heroku](https://final-capstone-project-lfmn.herokuapp.com/api/cars)
-- FrontEnd Website on [Netlify](https://final-capstone-project-r.netlify.app/)
+- BackEnd API Server hosted [Heroku](https://final-capstone-project-lfmn.herokuapp.com/api/cars)
+- FrontEnd SaaS hosted on [Netlify](https://car-rental-frontend-lfmn.netlify.app/)
 
 ## Built With
 
